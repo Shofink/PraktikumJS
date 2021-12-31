@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src ="validation.js"></script>
+    <title>Form </title>
+</head>
+
+<style>
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+        
+    }
+    form{
+        border: solid 1px black;
+        padding: 20px;
+        border-radius: 20px;
+    
+    }
+    input {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    button{
+        width: 100%;
+        display: flex;
+        
+    }
+    .item{
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    <div class="main">
+        <form name ="formValidation" method="POST" action="" onsubmit = "validasi()">
+            <h2>Konfirmasi Penerbangan</h2>
+            <div class= "item">
+                <label for ="nama">Nama :</label>
+                <input type="text" name="nama" id="nama">
+            </div>
+            <div class="item">
+                <label>Email :</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div class='item'>
+                <label>Jam Keberangkatan :</label>
+                <input type="time" class="inp" id="jamberangkat" name="jamberangkat" autocomplete="0" min="00.00"
+                    max="23.59" required>
+            </div>
+            Tujuan :
+            <select class="item" id="tujuan">
+                <option>pilih tujuan</option>
+                <option>Amerika</option>
+                <option>Singapore</option>
+                <option>Prancis</option>
+                <option>Jepang</option>
+                <option>Korea Selatan</option>
+                <option>Arab Saudi</option>
+            </select><br>
+           <label>Jumlah Tiket :</label>
+               <input type="number" id="jtiket" name="jtiket" min="1" max="10"><br>
+            <div>
+                <div class="button">
+                    <label for="submit">
+                        <input id="submit" type="submit">
+            </div>
+            <div id="hasil"></div>
+        </form>
+    </div> 
+</body>
+</html>

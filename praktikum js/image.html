@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Picker</title>
+</head>
+<style>
+    * {
+        margin: 5px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .body {
+        
+        border-radius: 5px;
+        
+    }
+    .gambar {
+        width: 50vh;
+    }
+</style>
+<script>
+    function pilih(){
+        let list_benda= document.getElementById("benda");
+            let idx = list_benda.selectedIndex;
+            console.log("gambar ke " + idx + " adalah " + list_benda[idx].value);
+            let area_gambar = document.getElementById("gambar");
+            area_gambar.src="gambar/" + list_gambar[idx].value+".jpg";
+    }
+</script>
+<body class="body">
+    <script src="gambar/"></script>
+    <h1 style="text-align:center;">Pilih Benda</h1>
+    <form id="frm">
+        <select id="benda" onchange="pilih()">
+            <option value="pilih">Pilih</option>
+            <option value="mobil">Mobil</option>
+            <option value="meja">Meja</option>
+            <option value="baju">Baju</option>
+            <option value="bunga">Bunga</option>
+            <option value="tas">Tas</option>
+            <option value="rumah">Rumah</option>
+        </select>
+        <div id="isi">
+            <img id="gambar" src="" alt="">
+        </div>
+    </form>
+</body>
+</html>

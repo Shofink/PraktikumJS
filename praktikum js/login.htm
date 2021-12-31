@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Username : <input type="text" name="username" id="username">
+    <br> <br>
+    Password : <input type="text" name="password" id="password">
+<br> <br>
+    <button onclick="Check()">Log in</button>
+
+    <script>
+        function Check(){
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        if(username == "ahmad2017" || password =="integrity"){
+          alert("Berhasil login")
+        }
+        else {
+            alert("Belum Berhasil login")
+        }
+    }
+    </script>
+</body>
+</html>
